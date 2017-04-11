@@ -1,6 +1,8 @@
 def knight_moves(start, stop)
-    raise "bad data type input" unless start.class && stop.class == Array
-    raise "insufficient arguments" unless start.length && stop.length == 2
-end
+    # check input
+    raise StandardError, "bad data type" unless start.class == Array && stop.class == Array
+    raise StandardError, "insufficient arguments" unless start.length ==2 && stop.length == 2
 
-knight_moves([33] , [65])
+    # Left off 04/11
+    raise StandardError, "invalid locations" unless start.each { |x| x > 0 && x < 9 }
+end

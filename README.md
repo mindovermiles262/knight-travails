@@ -1,10 +1,14 @@
 # Project Title
-Description.... [link](http://link_to_project)
+Your task is to build a function `knight_moves` that shows the simplest possible way to get from one square to another by outputting all squares the knight will stop on along the way.
+
+Part of [The Odin Project's](http://www.theodinproject.com) Ruby Curriculum. More information [here](http://www.theodinproject.com/courses/ruby-programming/lessons/data-structures-and-algorithms)
 
 ## Use
+Assuming an 8x8 board, pass beginning location, then end location in array form, `[x,y]` to the `knight_moves` function.
 
 ## Development Languages
-* 
+* Ruby v2.4
+* RSpec v3.5
 
 ## TODO
 1. 
