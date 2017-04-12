@@ -9,5 +9,15 @@ def knight_moves(start, stop)
         return raise StandardError, "Invalid Locations" if (x > 8 || x < 1)
     end
 
-    
+    # draw board and knight 
+    puts "\n       Your Game Board"
+    board_boxes = Array.new(10,"  ")
+    board_lines = "  -------------------------"
+    puts board_lines
+    8.times do
+        puts board_boxes.join("|")
+        puts board_lines
+    end
 end
+
+knight_moves([1,2],[3,4])
