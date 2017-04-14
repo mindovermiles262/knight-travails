@@ -1,4 +1,28 @@
 require './lib/knight_moves'
+require './lib/node'
+
+describe 'Node' do
+        before do
+            @node = Node.new(1,2)
+        end
+    it 'initializes x' do
+        expect(@node.x).to eql(1)
+    end
+    it 'initializes y' do
+        expect(@node.y).to eql(2)
+    end
+    it 'initializes parent to nil' do
+        expect(@node.parent).to eql(nil)
+    end
+    it 'initializes with non-nil parent' do
+        @child_node = Node.new(1, 2, @node)
+        expect(@child_node.parent).to be_an_instance_of(Node)
+    end
+
+    # test make children
+    
+end
+        
 
 describe 'knight_moves' do
     describe 'initialization' do
