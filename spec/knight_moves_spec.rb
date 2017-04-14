@@ -19,8 +19,8 @@ describe 'Node' do
         expect(@child_node.parent).to be_an_instance_of(Node)
     end
 
-    # test make children
-    
+    # test #make_children
+
 end
         
 
@@ -47,4 +47,7 @@ describe 'knight_moves' do
             expect{ knight_moves([1,8],[8,1]) }.to_not raise_error
         end
     end
+
+    # test #search
+
 end 
