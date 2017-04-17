@@ -3,11 +3,33 @@ require './lib/node'
 def knight_moves(start, stop)
    check_input(start, stop)
 
+    # convert location arrays to objects
+    start_object = Node.new(start[0], start[1])
+    stop_object = Node.new(stop[0], stop[1])
+
+    # Get path from end location to start location
+    find_path = search(stop_object, start_object)
+
+    # Get route of knight
+    route = []
+    route.unshift([find_path.x, find_path.y])
+    current_node = find_path.parent
+    until current_node.nil?
+        route.unshift([current_node.x, current_node.y])
+        current_node = current_node.parent
+    end
+    
+    # Print route to user
+    puts "You made it in #{route.size - 1} moves!"
+    print "Your Path: "
+    route.each { |location| print "#{location} "}
+    print "\n"
+   
 end
 
-def search(search, parent)
+def search(search, starting_location)
     queue = Array.new
-    queue << parent
+    queue << starting_location
 
     until queue.empty?
         current_node = queue.shift
@@ -31,3 +53,6 @@ def check_input(start, stop)
         return raise StandardError, "Invalid Locations" if (x > 8 || x < 1)
     end 
 end
+
+knight_moves([3,3], [4,3]) # > [3, 3] [4, 5] [6, 4] [4, 3]
+#knight_moves([1,1], [4,4]) # > [1, 1] [2, 3] [4, 4]

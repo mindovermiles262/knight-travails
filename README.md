@@ -11,7 +11,7 @@ Assuming an 8x8 board, pass beginning location, then end location in array form,
 * RSpec v3.5
 
 ## TODO
-1. 
+1. Write RSpec for #knight_moves
 2. 
 
 ## Contributing
