@@ -21,9 +21,8 @@ def knight_moves(start, stop)
     
     # Print route to user
     puts "You made it in #{route.size - 1} moves!"
-    print "Your Path: "
-    route.each { |location| print "#{location} "}
-    print "\n"
+    puts "Your Path: #{route}"
+    return route
    
 end
 
